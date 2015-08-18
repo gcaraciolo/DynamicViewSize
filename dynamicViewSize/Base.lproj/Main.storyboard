@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWz-Fi-XUZ">
+                                <rect key="frame" x="150" y="50" width="300" height="190"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-EA-0WG">
+                                        <rect key="frame" x="63" y="8" width="174" height="144"/>
+                                        <color key="backgroundColor" red="0.64223044920000005" green="0.87667147069999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="u5y-wK-wwH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="D4d-LQ-Lfl"/>
+                                    <constraint firstItem="I3l-EA-0WG" firstAttribute="top" secondItem="hWz-Fi-XUZ" secondAttribute="top" constant="8" id="atw-zc-rY3"/>
+                                    <constraint firstItem="I3l-EA-0WG" firstAttribute="leading" secondItem="hWz-Fi-XUZ" secondAttribute="leading" constant="63" id="bDX-Fr-eGN"/>
+                                    <constraint firstAttribute="bottom" secondItem="I3l-EA-0WG" secondAttribute="bottom" constant="38" id="hbf-46-tgD"/>
+                                    <constraint firstAttribute="trailing" secondItem="I3l-EA-0WG" secondAttribute="trailing" constant="63" id="z43-JA-e1Q"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Increase subview height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-ju-nVx">
+                                <rect key="frame" x="208" y="510" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10000" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Ll-8E-a9Q">
+                                <rect key="frame" x="253" y="539" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xje-i8-Yca"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Ll-8E-a9Q" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="519" id="3nq-Pn-6qd"/>
+                            <constraint firstAttribute="centerX" secondItem="ymp-ju-nVx" secondAttribute="centerX" constant="-0.5" id="9Cp-20-hh6"/>
+                            <constraint firstItem="hWz-Fi-XUZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="IDt-d7-Rac"/>
+                            <constraint firstAttribute="centerX" secondItem="hWz-Fi-XUZ" secondAttribute="centerX" id="o6e-gv-atU"/>
+                            <constraint firstItem="hWz-Fi-XUZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="pF1-UA-YYT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hWz-Fi-XUZ" secondAttribute="bottom" priority="750" constant="360" id="tqw-QO-esN"/>
+                            <constraint firstAttribute="centerX" secondItem="9Ll-8E-a9Q" secondAttribute="centerX" id="udV-eq-Qas"/>
+                            <constraint firstItem="ymp-ju-nVx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="490" id="us7-Rc-32m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constraintSubviewHeight" destination="u5y-wK-wwH" id="hwx-Zx-kdy"/>
+                        <outlet property="stepper" destination="9Ll-8E-a9Q" id="Q0t-X0-IUM"/>
+                        <outlet property="subview" destination="I3l-EA-0WG" id="ubr-JL-IZw"/>
+                        <outlet property="viewContent" destination="hWz-Fi-XUZ" id="9h5-wx-eHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
